@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1>Miroslaw Gregorowicz</h1>
+<p>Backend &nbsp;&bull;&nbsp; Web  &bull;&nbsp; Developer</p>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('get_web', web='twitter') }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="{{ url_for('get_web', web='facebook') }}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="{{ url_for('get_web', web='github') }}" class="icon brands fa-github"><span class="label">Github</span></a></li>
+        <li><a href="{{ url_for('get_web', web='email') }}" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+</nav>
+{% endblock %}
