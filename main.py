@@ -5,6 +5,8 @@ app = Flask(__name__)
 year = datetime.datetime.now().year
 
 
+
+
 @app.route('/')
 def home():
     return render_template('home_page.html', year=year)
