@@ -26,14 +26,19 @@ def get_web(web):
         return redirect('/')
 
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html', year=year)
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', year=year)
 
 
 @app.route('/about')
 def about():
     return render_template('about.html', year=year)
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', year=year)
 
 
 if __name__ == '__main__':
