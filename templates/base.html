@@ -10,7 +10,6 @@
 			  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 			  crossorigin="anonymous">
 		<link rel="stylesheet" href="static/assets/css/main.css" />
-
 		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -18,8 +17,8 @@
 			<div id="bg"></div>
 			<div id="overlay"></div>
 			<div id="main">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-					  <div class="container-fluid">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+					<div class="container-fluid">
 						<div class="navbar-spacer"></div>
 						<a class="navbar-brand" href="{{ url_for('home') }}">Home Page</a>
 						<button class="navbar-toggler"
@@ -29,34 +28,36 @@
 								aria-controls="navbarSupportedContent"
 								aria-expanded="false"
 								aria-label="Toggle navigation">
-						  <span class="navbar-toggler-icon"></span>
+							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						  </ul>
-						  <form class="d-flex" role="search">
-							<a class="nav-link" style="color: black" href="{{ url_for('cv') }}">CV</a>
-							<div class="navbar-spacer"></div>
-							<a class="nav-link" style="color: black" href="{{ url_for('profile') }}">Profile</a>
-							<div class="navbar-spacer"></div>
-							<a class="nav-link" style="color: black" href="{{ url_for('about') }}">About Me</a>
-							<div class="navbar-spacer"></div>
-							<a class="nav-link" style="color: black" href="{{ url_for('contact') }}">Contact</a>
-							<div class="navbar-spacer"></div>
-						  </form>
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Profile
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="{{ url_for('about') }}">About Me</a></li>
+										<li><a class="dropdown-item" href="{{ url_for('cv') }}">Curriculum Vitae</a></li>
+										<li><a class="dropdown-item" href="{{ url_for('profile') }}">What I do</a></li>
+									</ul>
+								</li>
+							</ul>
+							<form class="d-flex" role="search">
+								<a class="nav-link" style="color: black" href="{{ url_for('contact') }}">Contact</a>
+								<div class="navbar-spacer"></div>
+							</form>
 						</div>
-					  </div>
-					</nav>
+					</div>
+				</nav>
 				<!-- Header -->
-					<header id="header">
-						{% block content %}{%  endblock %}
-					</header>
-
+				<header id="header">
+					{% block content %}{%  endblock %}
+				</header>
 				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">Copyright © {{ year }}  <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
-
+				<footer id="footer">
+					<span class="copyright">Copyright © {{ year }}  <a href="http://html5up.net">HTML5 UP</a>.</span>
+				</footer>
 			</div>
 		</div>
 		<script>

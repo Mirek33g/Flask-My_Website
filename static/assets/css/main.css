@@ -43,6 +43,7 @@ blockquote, q {
 
 .navbar-spacer {
     width: 40px;
+
 }
 
 
@@ -89,7 +90,7 @@ input, select, textarea {
 
 	body {
 		background:#fff;
-		overflow: hidden;
+		overflow: auto;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1085,3 +1086,6 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+
+
