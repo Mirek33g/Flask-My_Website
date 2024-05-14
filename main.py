@@ -26,6 +26,11 @@ def get_web(web):
         return redirect('/')
 
 
+@app.route('/cv')
+def cv():
+    return render_template('cv.html', year=year)
+
+
 @app.route('/profile')
 def profile():
     return render_template('profile.html', year=year)
