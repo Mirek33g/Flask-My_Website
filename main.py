@@ -12,8 +12,7 @@ def home():
 
 @app.route('/<page>')
 def render_page(page):
-    valid_pages = ['cv', 'certificates', 'profile', 'about', 'contact']
-    if page in valid_pages:
+    if page:
         return render_template(f'{page}.html', year=year)
     else:
         return render_template('404.html', year=year), 404
