@@ -18,7 +18,7 @@ def render_page(page):
         return render_template('404.html', year=year), 404
 
 
-@app.route('/<web>')
+@app.route('/social/<web>')
 def get_web(web):
     if web == 'twitter':
         return redirect('https://twitter.com/Mirek4g')
